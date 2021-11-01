@@ -13,6 +13,9 @@ if(!process.env.PORT){
     process.exit(1);
 }
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 //app declarations
 const indexRouter = require("./routes/index");
 
